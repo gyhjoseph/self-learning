@@ -22,6 +22,7 @@ class PrimeDirective {
     return true;
   }
 
+  // method to return prime numbers array only
   public ArrayList<Integer> onlyPrimes(int[] numbers) {
     ArrayList<Integer> primes = new ArrayList<Integer>();
     for (int number : numbers) {
@@ -30,6 +31,23 @@ class PrimeDirective {
       }
     }
     return primes;
+  }
+
+  // method to return odd or even array depending on argument
+  public ArrayList<Integer> oddEvenSort(String oddOrEven, int[] numbers) {
+    ArrayList<Integer> odd = new ArrayList<Integer>();
+    ArrayList<Integer> even = new ArrayList<Integer>();
+    for (int number : numbers) {
+      if (number % 2 == 0) {
+        even.add(number);
+      } else {
+        odd.add(number);
+      }
+    }
+    if (oddOrEven.equalsIgnoreCase("odd")) {
+      return odd;
+    }
+    return even;
   }
   
   public static void main(String[] args) {
@@ -45,6 +63,9 @@ class PrimeDirective {
 
     // testing of onlyPrimes ArrayList
     System.out.println(pd.onlyPrimes(numbers));
+
+    // testing of odd or even method
+    System.out.println(pd.oddEvenSort("odd", numbers));
   }  
 
 }
