@@ -1,9 +1,9 @@
-// Import statement:
+// import to use ArrayList
 import java.util.ArrayList;
 
 class PrimeDirective {
   
-  // Add your methods here:
+  // check whether a number is prime
   public boolean isPrime(int number) {
     if (number == 2) {
       System.out.println("This is the smallest prime number!");
